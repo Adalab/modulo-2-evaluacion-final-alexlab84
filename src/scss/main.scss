@@ -1,0 +1,39 @@
+/*
+  Aquí van tus estilos o los @import './tus/ficheros'
+*/
+
+body {
+  background-color: lightblue;
+}
+
+.img {
+  width: 100%;
+  height: 500px;
+}
+
+.container {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  
+}
+
+.cards {
+  border: solid 2px blue;
+  margin: 10px;
+  padding: 5px;
+}
+
+.listings {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.title_character {
+  margin-left: 40%;
+}
+
+.fovorite {
+  background-color: orangered;
+}
