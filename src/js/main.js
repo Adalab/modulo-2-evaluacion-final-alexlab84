@@ -54,7 +54,7 @@ console.log('Antes');
 
 
   
-fetch('https://api.disneyapi.dev/character?pageSize=50')
+fetch('//api.disneyapi.dev/character?pageSize=50')
    .then(response => response.json()) 
   .then(dataFromFetch => {
     /* console.log(dataFromFetch.data); */
