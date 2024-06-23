@@ -21,8 +21,8 @@ function renderCharacter (obj) {
     imageUrl = obj.imageUrl;
   }
 
-  charactersCards.innerHTML += `<li class="cards">
-    <img src="${imageUrl}" alt="Foto de ${obj.name}">
+  charactersCards.innerHTML += `<li class="js__cards cards">
+    <img class="imgCards" src="${imageUrl}" alt="Foto de ${obj.name}">
     <p>${obj.name}</p></li>` 
     /* const html = charactersCards.innerHTML;
     return html; */
@@ -33,11 +33,29 @@ function renderAllCharacter() {
   for (const character of characters) {
     html += renderCharacter(character);
   };
-  return html;
+  
+  const allCards = document.querySelectorAll('.js__cards');
+  
+  for (const eachCardLi of allCards) {
+    
+    eachCardLi.addEventListener('click', handleClickCard);
+  }
 }
 
 
 // FUNCIONES DE EVENTOS (HANDLER)
+
+function handleClickCard(ev) {
+  console.log('Has hecho click');
+
+  console.log(ev.currentTarget);
+
+  ev.currentTarget.classList.toggle('favorite');
+
+ 
+
+  
+}
 
 
 // EVENTOS

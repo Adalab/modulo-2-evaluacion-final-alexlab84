@@ -11,6 +11,11 @@ body {
   height: 500px;
 }
 
+.imgCards {
+  width: 100%;
+  height: 80%;
+}
+
 .container {
   display: flex;
   list-style: none;
@@ -19,9 +24,10 @@ body {
 }
 
 .cards {
-  border: solid 2px blue;
   margin: 10px;
-  padding: 5px;
+  padding: 10px;
+  background-color: burlywood;
+  color: brown;
 }
 
 .listings {
@@ -34,6 +40,7 @@ body {
   margin-left: 40%;
 }
 
-.fovorite {
-  background-color: orangered;
+.favorite {
+  background-color: rgb(193, 165, 221);
+  color: white;
 }
