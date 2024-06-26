@@ -25,7 +25,7 @@ function renderCharacter(obj, container) {
 
   container.innerHTML += `<li class="js__cards cards" data-id="${obj._id}">
     <img class="imgCards" src="${imageUrl}" alt="Foto de ${obj.name}">
-    <p>${obj.name}</p></li>`;
+    <p class="cardsText">${obj.name}</p></li>`;
 }
 
 
@@ -118,6 +118,5 @@ const favsFromLS = JSON.parse(localStorage.getItem('favs'));
 
 if(favsFromLS !== null ) {
   favorites = favsFromLS;
-  
   renderAllFavorites();
 }
