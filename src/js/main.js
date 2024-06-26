@@ -15,7 +15,7 @@ let favorites = [];
 // FUNCIONES
 
 function renderCharacter(obj, container) {
-  console.log(obj);
+  
   let imageUrl =
     "https://via.placeholder.com/210x295/ffffff/555555/?text=Disney";
 
@@ -32,7 +32,6 @@ function renderCharacter(obj, container) {
 function renderAllCharacter() {
   charactersCards.innerHTML = "";
   for (const character of characters) {
-    console.log("entra aqui");
     renderCharacter(character, charactersCards);
   }
 
@@ -55,8 +54,8 @@ function renderAllFavorites() {
 // FUNCIONES DE EVENTOS (HANDLER)
 
 function handleClickCard(ev) {
-  console.log("Has hecho click");
-  console.log(ev.currentTarget);
+ 
+  
   let characterClickedId = ev.currentTarget.dataset.id;
 
   const characterClickedObj = characters.find(
@@ -71,9 +70,11 @@ function handleClickCard(ev) {
 
   if (clickedFavoriteIndex === -1) {
     favorites.push(characterClickedObj);
+    localStorage.setItem('favs', JSON.stringify(favorites));
     renderCharacter(characterClickedObj, favoritesCards);
   } else {
     favorites.splice(clickedFavoriteIndex, 1);
+    localStorage.setItem('favs', JSON.stringify(favorites));
     renderAllFavorites();
   }
 
@@ -88,7 +89,6 @@ function handleClickSearch(ev) {
     .then((response) => response.json())
     .then((dataFromFetch) => {
       characters = dataFromFetch.data;
-      console.log(characters);
       renderAllCharacter();
     });
 }
@@ -105,10 +105,7 @@ searchBtn.addEventListener("click", handleClickSearch);
 fetch("//api.disneyapi.dev/character?pageSize=50")
   .then((response) => response.json())
   .then((dataFromFetch) => {
-    /* console.log(dataFromFetch.data); */
-    console.log("Dentro");
     characters = dataFromFetch.data;
-
     renderAllCharacter();
   });
 
@@ -117,4 +114,10 @@ fetch("//api.disneyapi.dev/character?pageSize=50")
   
   renderAllFavorites();
 
+const favsFromLS = JSON.parse(localStorage.getItem('favs'));
 
+if(favsFromLS !== null ) {
+  favorites = favsFromLS;
+  
+  renderAllFavorites();
+}
