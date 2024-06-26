@@ -13,14 +13,12 @@
     </header>
     
     <main>
-      <div class="containerForm">
-        <form>
-          <input class="formInputText js__inputText" type="text" name="character" id="character" placeholder="Example: Achilles" />
-          <input class="formBtn js__searchButton" type="submit" value="Search">
-        </form>
-      </div>
-      
-      <div class="colocar">
+      <form class="containerForm">
+        <input class="formInputText js__inputText" type="text" name="character" id="character" placeholder="Example: Achilles" />
+        <input class="formBtn js__searchButton" type="submit" value="Search">
+      </form>
+
+      <div class="grid">
         <div>
           <section>
             <h2 class="title_character">Characters</h2>
@@ -31,7 +29,7 @@
         <div>
           <section>
             <h2 class="favoriteTitle">Favorites</h2>
-            <ul class="js__favoritesCards"></ul>
+            <ul class="js__favoritesCards favoriteUl"></ul>
           </section>
         </div>
       </div>

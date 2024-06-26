@@ -45,14 +45,16 @@ table {
 
 .header {
   height: 100vh;
+  width: 100vw;
   background-image: url('../images/castilloDisney.jpg');
   background-size: cover;
-  background-position: 10%; 
+  background-repeat: no-repeat;
+  background-position: 50%; 
 }
 
 .imgCards {
-  width: 160px;
-  height: 170px;
+  width: 75px;
+  height: 75px;
   border-radius: 20px;
 }
 
@@ -68,8 +70,8 @@ table {
   background-color: burlywood;
   color: brown;
   border-radius: 20px;
-  width: 200px;
-  height: 240px;
+  width: 100px;
+  height: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,27 +79,45 @@ table {
 }
 
 .cardsText {
-  font-size: medium;
-  font-weight: 100;
+  font-size: small;
   font-style: italic;
   font-family: fantasy;
   color: rebeccapurple;
 }
 
 .title_character {
-  margin-left: 35%;
+  margin-left: 10%;
+  @media(min-width: 768px) {
+    margin-left: 160px;
+  }
+  @media (min-width: 1200px) {
+    margin-left: 370px;  
+  }
+
   font-size: x-large;
   font-family: fantasy;
   font-style: italic;
   color: blueviolet;
 }
 
-.favoriteTitle {
-  margin-left: 17%;
+.favoriteTitle { 
   font-size: x-large;
   font-family: fantasy;
   font-style: italic;
   color: blueviolet;
+  @media(min-width: 768px) {
+    margin-left: 65px;
+  }
+  @media (min-width: 1200px) {
+    margin-left: 140px;  
+  }
+}
+
+.favoriteUl {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .favorite {
@@ -107,11 +127,16 @@ table {
 
 .containerForm {
   background-color: white;
-  width: 650px;
   height: 60px;
   display: flex;
   align-items: center;
-  margin-left: 300px;
+  @media(min-width: 768px) {
+    margin-left: 50px;
+    width: 650px;
+  }
+  @media (min-width: 1200px) {
+    margin-left: 300px;  
+  }
   padding: 20px;
   position: relative;
   bottom: 25px;
@@ -119,9 +144,13 @@ table {
 }
 
 .formInputText {
-  width: 500px;
+  width: 180px;
   height: 20px;
-  border: 2px solid blueviolet
+  border: 2px solid blueviolet;
+  @media(min-width: 768px) {
+    width: 500px;
+  }
+  
 }
 
 .formBtn {
@@ -134,7 +163,7 @@ table {
   border-radius: 10px;
 }
 
-.colocar {
+.grid {
   display: grid;
   grid-template-columns: 70% 30%;
 }
