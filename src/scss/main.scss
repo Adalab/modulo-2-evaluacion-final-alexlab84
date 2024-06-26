@@ -32,7 +32,6 @@ body {
 
 .listings {
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
 }
 
@@ -43,4 +42,31 @@ body {
 .favorite {
   background-color: rgb(193, 165, 221);
   color: white;
+}
+
+.form {
+  position: relative;
+  bottom: 30px;
+  left: 100px;
+  height: 50px;
+}
+
+.formInputText {
+  width: 500px;
+  height: 50px;
+  
+}
+
+.formBtn {
+  background-color: blue;
+  color: white;
+  margin-left: 10px;
+  height: 30px;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.colocar {
+  display: grid;
+  grid-template-columns: 70% 30%;
 }
