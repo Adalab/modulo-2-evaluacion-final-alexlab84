@@ -102,7 +102,7 @@ searchBtn.addEventListener("click", handleClickSearch);
 // CODIGO CUANDO CARGA LA PAGINA
 
 
-fetch("//api.disneyapi.dev/character?pageSize=50")
+fetch("//api.disneyapi.dev/character?pageSize=51")
   .then((response) => response.json())
   .then((dataFromFetch) => {
     characters = dataFromFetch.data;
