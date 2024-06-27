@@ -1,0 +1,37 @@
+.containerForm {
+    background-color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    @media(min-width: 768px) {
+      margin-left: 50px;
+      width: 650px;
+    }
+    @media (min-width: 1200px) {
+      margin-left: 300px;  
+    }
+    padding: 20px;
+    position: relative;
+    bottom: 25px;
+    border-radius: 10px;
+}
+  
+.formInputText {
+    width: 180px;
+    height: 20px;
+    border: 2px solid blueviolet;
+    @media(min-width: 768px) {
+      width: 500px;
+    }
+    
+}
+  
+.formBtn {
+    background-color: blueviolet;
+    color: white;
+    margin-left: 10px;
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+}

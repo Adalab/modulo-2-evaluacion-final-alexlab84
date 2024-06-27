@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}

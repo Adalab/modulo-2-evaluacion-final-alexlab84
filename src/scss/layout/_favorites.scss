@@ -1,0 +1,24 @@
+.favoriteTitle { 
+    font-size: x-large;
+    font-family: fantasy;
+    font-style: italic;
+    color: blueviolet;
+    @media(min-width: 768px) {
+      margin-left: 65px;
+    }
+    @media (min-width: 1200px) {
+      margin-left: 140px;  
+    }
+}
+  
+.favoriteUl {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.favorite {
+    background-color: rgb(193, 165, 221);
+    color: white;
+}
